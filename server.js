@@ -15,6 +15,7 @@ const sequelize = require('./config/connection.js');
 //Sequelize Store object that allows us to create a persistent session storage using MySQL or any other supported
 //database backend instead of memory storage by setting it equal to an instance of `SequelizeStore`
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
+// You can see this inside the object on line 35...look at like 40
 
 //=====================================================================//
 //port available for heroku and local server
@@ -60,3 +61,9 @@ app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT}`)
 );
 
+
+//***SHOULD WE BE USING THIS BELOW ? */
+//Since we are using a sequelize object//
+
+///sequelize.sync({ force: false }).then(() => {
+ // app.listen(PORT, () => console.log('Now listening'));
