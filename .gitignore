@@ -1,1 +1,6 @@
+//Here . node_modules and .env will be ignored by git
+//This keeps code size smaller and .env is where a MYSQL password would be..so dont want everyone to know that.
+
 node_modules
+
+.env
