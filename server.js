@@ -4,7 +4,7 @@ const express = require('express');
 //Import path to handle and transform file paths
 const path = require('path');
 //Import required path to routes
-const api = require('./routes/routes.js');
+const routes = require('./controllers');
 //Import Express-Session
 const session = require('express-session');
 //Import handlebars
@@ -46,7 +46,7 @@ app.use(session(sess));
 //=====================================================================//
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-app.use('/api', api);
+app.use(require('./controllers'));
 
 //=====================================================================//
 app.use(express.static(path.join(__dirname, 'public')));
