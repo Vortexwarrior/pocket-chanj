@@ -57,13 +57,14 @@ app.get('*', (req, res) => {
 
 //=======================================================================//
   //Starts the server to begin listening
-app.listen(PORT, () => 
-    console.log(`App listening at http://localhost:${PORT}`)
-);
 
 
 //***SHOULD WE BE USING THIS BELOW ? */
 //Since we are using a sequelize object//
+//Yes to above. TY Krysta - JR
 
-///sequelize.sync({ force: false }).then(() => {
- // app.listen(PORT, () => console.log('Now listening'));
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => 
+    console.log('Now listening')
+    );
+});
