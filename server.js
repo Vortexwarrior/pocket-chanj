@@ -60,7 +60,7 @@ app.get('*', (req, res) => {
 //Yes to above. TY Krysta - JR
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => 
-    console.log('Now listening')
+  app.listen(PORT, () =>
+    console.log(`Now listening at http://localhost:${PORT}`)
     );
 });
