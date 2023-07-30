@@ -1,3 +1,6 @@
+// I couldn't comment on the files, so I'm commenting here to say that I 
+// nested the js directory inside public to follow MVC structure
+// I did not change any of the code. 
 const loginFormHandler = async (event) => {
     event.preventDefault();
   

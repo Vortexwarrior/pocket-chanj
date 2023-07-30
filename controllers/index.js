@@ -1,12 +1,13 @@
 const express = require('express');
-const path = require('path');
-
 const router = express.Router();
 
+// Home page route
 router.get('/', (req, res) => {
-    res.render('main');
+    res.render('index');
 });
 
+
+//Placeholder Code for testing api
 router.get('/api', (req, res) => {
     res.json({ message: "This is the API response!" });
 });
