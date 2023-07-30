@@ -1,4 +1,5 @@
 //=====================================================================//
+// I only comment out lines 54-57
 //DEPENDENCIES//
 //Import path to handle and transform file paths
 const path = require('path');
@@ -50,9 +51,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  });
+// I commented out app.get code since we no longer use index.html. We can add it back it in.
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+//   });
 
 //=======================================================================//
   //Starts the server to begin listening
