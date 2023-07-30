@@ -22,7 +22,7 @@ const app = express();
 
 //=====================================================================//
 //port available for heroku and local server
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 //====================================================================//
 //Set handlebars as the default template engine.
 const hbs = exphbs.create({});
@@ -48,16 +48,12 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
 app.use(routes);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
   });
 
-  app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} `)
-);
 //=======================================================================//
   //Starts the server to begin listening
 //***SHOULD WE BE USING THIS BELOW ? */
