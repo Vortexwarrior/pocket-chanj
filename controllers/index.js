@@ -15,9 +15,9 @@ router.use('/api', apiRoutes);
 //   });
 
 
-// Home page route
-// router.get('/', (req, res) => {
-//     res.render('index');
-// });
+//Homepage route
+router.get('/', (req, res) => {
+    res.render('index');
+});
 
 module.exports = router;
