@@ -35,6 +35,14 @@ Expenses.init(
                 isDecimal:true
             }
       }
-    });
+    },
+    {
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'Expenses',
+    }
+    );
 
 module.exports = Expenses

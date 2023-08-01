@@ -1,5 +1,16 @@
-const express = require('express');
-const router = express.Router();
+
+const router = require('express').Router();
+const incomeRoutes = require('./incomeRoutes');
+const expensesRoutes = require('./expensesRoutes');
+const budgetReportsRoutes = require('./budgetreportRoutes')
+
+router.use('/incomes', incomeRoutes);
+router.use('/expenses', expensesRoutes);
+router.use('/budgetreports', budgetReportsRoutes);
+
+// const express = require('express');
+// const router = express.Router();
+
 
 const apiRoutes = require('./api');
 const userRoutes = require('./api/user-routes'); 

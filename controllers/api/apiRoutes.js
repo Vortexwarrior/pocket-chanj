@@ -1,18 +1,12 @@
-const router = require('express').Router();
+// const router = require('express').Router();
+// const { BudgetReport, Expenses, Income } = require ('../../models');
+
 
 // Import the necessary models. Once Income.js is written and Expense.js is written we need to import those as well. 
 //I removed Income and Expense to debug Heroku -JR
-const { BudgetReport } = require ('../../models');
 
-// Route to get all incomes
-// router.get('/incomes', async (req, res) => {
-//     try {
-//         const incomes = await Income.findAll();
-//         res.status(200).json(incomes);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+
+
 
 //Route to get all spending categories
 // router.get('/expenses', async (req, res) => {
@@ -34,13 +28,13 @@ const { BudgetReport } = require ('../../models');
 //     }
 // });
 
-router.get('/budgetreports', async (req, res) => {
-    try {
-        const budgetReports = await BudgetReport.findAll();
-        res.status(200).json(budgetReports);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// router.get('/budgetreports', async (req, res) => {
+//     try {
+//         const budgetReports = await BudgetReport.findAll();
+//         res.status(200).json(budgetReports);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 module.exports = router;
