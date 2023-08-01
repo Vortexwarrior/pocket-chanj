@@ -1,0 +1,76 @@
+:root {
+    --primary: #3d5852;
+    --secondary: #86938f;
+    --light: #e3e4e3;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);
+    
+  }
+
+  .login-card {
+    
+    margin: 0 0px 20px 300px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 5px;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: double;
+    border-width: thick;
+    background-color: #2ca7ae;
+    color: rgb(92, 67, 6);
+  }
+
+  .page-title {
+   text-align: center;
+   font-size: 30px;
+  }
+  .form-group {
+    margin-left: 15px;
+  }
+
+  .btn-primary {
+    margin-bottom: 15px;
+  }
+
+ 
+  
+  h1 {
+    text-align: center;
+    color: purple;
+    margin-top: 40PX;
+  }
+
+
+  h2 {
+    text-align: center; 
+    color: purple;
+  }
+
+  nav {
+   text-align: center;
+   font-size: 25px;
+   margin-left: 15px;
+  }
+
+  p {
+    text-align: center;
+    
+  }
+
+
+body {
+    background-color: rgb(184, 237, 212);
+}
+
+header {
+    background-color: rgb(142, 136, 145);
+    text-align: center;
+    border: 3px solid var(--dark);
+    border-radius: var(--border-radius);
+    border-style: double;
+    border-width: thick;
+    margin: 0;
+    padding: 10px 0;
+}
+
