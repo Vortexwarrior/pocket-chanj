@@ -30,7 +30,7 @@ Expenses.init(
       },
       total_expenses:{
         type: DataTypes.DECIMAL,
-        allowNull: false,
+        allowNull: true,
             validate:{
                 isDecimal:true
             }

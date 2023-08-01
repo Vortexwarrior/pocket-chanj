@@ -13,14 +13,14 @@ BudgetReport.init(
         },
         total_income: {
             type: DataTypes.DECIMAL,
-            allowNull: false,
+            allowNull: true,
                 validate: {
                     isDecimal: true,
                 }
         },
         total_expense: {
             type: DataTypes.DECIMAL,
-            allowNull: false,
+            allowNull: true,
                 validate: {
                     isDecimal: true,
                 }
