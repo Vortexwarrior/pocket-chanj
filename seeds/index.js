@@ -12,7 +12,7 @@ const seedAll = async () => {
 
     await seedExpenses();
     console.log('\n----- EXPENSES SEEDED -----\n');
-
+    console.log(typeof seedIncome);
     await seedIncome();
     console.log('n\----- INCOME SEEDED -----\n');
 
