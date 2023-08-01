@@ -2,10 +2,10 @@ const { BudgetReport } = require('../models');
 
 const budgetReportData = [
     {
-        total_income: '',
+        total_income: '50000.00',
     },
     {
-        total_expense: '',
+        total_expense: '5000.00',
     }
 ];
 

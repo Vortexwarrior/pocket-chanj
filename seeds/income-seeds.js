@@ -1,4 +1,4 @@
-const seedCategories = require('../../ormecommerce/Develop/seeds/category-seeds');
+// const seedCategories = require('../../ormecommerce/Develop/seeds/category-seeds');
 const { Income } = require('../models');
 
 const incomeData = [
@@ -13,5 +13,7 @@ const incomeData = [
 ];
 
 const seedIncome = () => Income.bulkCreate(incomeData);
+console.log('statusof seedIncome');
+console.log(typeof seedIncome);
 
-module.export = seedIncome;
+module.exports = seedIncome;
