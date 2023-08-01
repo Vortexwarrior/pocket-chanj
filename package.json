@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "test": "echo\"Error: no test specified\" && exit l",
-        "start": "nodemon --exec babel-node scr/server.js"
+        "start": "nodemon --exec babel-node scr/server.js",
+        "seed": "node seeds/index.js"
     },
     "author": "",
     "license": "MIT",

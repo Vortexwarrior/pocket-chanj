@@ -1,15 +1,23 @@
 const express = require('express');
 const router = express.Router();
-
-// Home page route
-router.get('/', (req, res) => {
-    res.render('index');
-});
-
+const apiRoutes = require('./api/index');
+router.use('/api', apiRoutes);
 
 //Placeholder Code for testing api
-router.get('/api', (req, res) => {
-    res.json({ message: "This is the API response!" });
-});
+// router.get('/api', (req, res) => {
+//     res.json({ message: "This is the API response!" });
+// });
+
+
+
+// router.use((req, res) => {
+//     res.send("<h1>Wrong Route!</h1>")
+//   });
+
+
+// Home page route
+// router.get('/', (req, res) => {
+//     res.render('index');
+// });
 
 module.exports = router;

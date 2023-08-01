@@ -11,14 +11,27 @@ BudgetReport.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        total_income:{
-            type: DataTypes.INTEGER,
+        total_income: {
+            type: DataTypes.DECIMAL,
             allowNull: false,
+                validate: {
+                    isDecimal: true,
+                }
         },
-        total_expense:{
-            type:DataTypes.INTEGER,
+        total_expense: {
+            type: DataTypes.DECIMAL,
             allowNull: false,
+                validate: {
+                    isDecimal: true,
+                }
         }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'BudgetReport',
     }
 
 )

@@ -24,12 +24,19 @@ Income.init(
         },
         total_amount:{
             type: DataTypes.DECIMAL,
-            allowNull: false,
+            allowNull: true,
             validate:{ 
                 isDecimal:true
             }
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Income',
+      }
 )
 
 module.exports = Income
