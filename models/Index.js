@@ -3,6 +3,7 @@
 const BudgetReport = require('./BudgetReport');
 const Expenses = require('./Expenses');
 const Income = require('./Income');
+const User = require('./User');
 
 // Income belongsto BudgetReport
 // Expense belongs to budgetreport
@@ -19,4 +20,5 @@ module.exports = {
     Income,
     Expenses,
     BudgetReport,
+    User,
 };
