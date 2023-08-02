@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Change</title>
     <link rel="stylesheet" href="/css/style.css">
-    
-   </head>
+    </head>
+
 <body>
-    {{#if logged_in}}
-    <nav>
-        <button class="btn" id="logout">logout</button>
+<header>
+  <h1>&#x1F4B8 Pocket Change &#x1F4B8</h1>
+ <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
     </nav>
+     </header>
+  <main>
+   
+  </main>
+
+    {{#if logged_in}}
+    
+        <button class="btn" id="logout">logout</button>
+    
     {{/if}}
     {{{ body }}}
+
 </body>
 </html>
