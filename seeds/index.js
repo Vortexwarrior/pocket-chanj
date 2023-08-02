@@ -1,6 +1,7 @@
 const seedBudgetReport = require('./budgetreport-seeds');
 const seedExpenses = require('./expenses-seeds');
 const seedIncome = require('./income-seeds');
+const seedUserData = require('./user-data-seeds');
 
 const sequelize = require('../config/connection');
 
@@ -15,6 +16,9 @@ const seedAll = async () => {
     console.log(typeof seedIncome);
     await seedIncome();
     console.log('n\----- INCOME SEEDED -----\n');
+
+    await seedUserData();
+    console.log('\n----- USERS SEEDED -----\n');
 
     process.exit(0);
 };
