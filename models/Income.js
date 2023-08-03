@@ -42,7 +42,7 @@ Income.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Income',
+        modelName: 'income',
       }
 )
 
