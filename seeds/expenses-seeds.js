@@ -1,4 +1,4 @@
-const {Expenses} = require('../models');
+const {Expenses} = require('../models/indexnew');
 
 const expensesData = [
     {

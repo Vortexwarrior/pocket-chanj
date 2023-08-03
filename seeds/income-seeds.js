@@ -1,5 +1,5 @@
 // const seedCategories = require('../../ormecommerce/Develop/seeds/category-seeds');
-const { Income } = require('../models');
+const { Income } = require('../models/indexnew');
 
 const incomeData = [
     {
