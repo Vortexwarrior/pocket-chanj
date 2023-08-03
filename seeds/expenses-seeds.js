@@ -12,7 +12,7 @@ const expensesData = [
     {
         source_name: 'phone bill',
         amount_due: '139.86',
-        due_date: '08/15/2023'
+        due_date: '2023-08-15'
     },
 ];
 

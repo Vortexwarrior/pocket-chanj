@@ -5,16 +5,15 @@ const Expenses = require('./Expenses');
 const Income = require('./Income');
 const User = require('./User');
 
-// Income belongsto BudgetReport
-// Expense belongs to budgetreport
+User.hasMany(Expenses, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+  });
 
-Income.belongsTo(BudgetReport,{
-    foreignKey: 'budget_id'
-});
-
-Expenses.belongsTo(BudgetReport,{
-    foreignKey: 'budget_id'
-});
+User.hasMany(Income, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+  });
 
 module.exports = {
     Income,
