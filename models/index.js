@@ -4,12 +4,15 @@ const BudgetReport = require('./BudgetReport');
 const Expenses = require('./Expenses');
 const Income = require('./Income');
 const User = require('./User');
+
 Expenses.belongsTo(User, {
   foreignKey:'user_id',
 });
+
 Income.belongsTo(User, {
   foreignKey:'user_id',
-})
+});
+
 User.hasMany(Expenses, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
