@@ -31,7 +31,7 @@ BudgetReport.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'BudgetReport',
+        modelName: 'budgetreport',
     }
 
 )

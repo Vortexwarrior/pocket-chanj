@@ -48,7 +48,7 @@ Expenses.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'Expenses',
+      modelName: 'expenses',
     }
     );
 
