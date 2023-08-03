@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const apiRoutes = require('./api/index');
+const homeroutes = require('./homeRoutes')
 router.use('/api', apiRoutes);
-
+router.use('/', homeroutes);
 //Placeholder Code for testing api
 // router.get('/api', (req, res) => {
 //     res.json({ message: "This is the API response!" });
