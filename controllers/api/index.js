@@ -11,7 +11,7 @@ router.use('/budgetreports', budgetReportsRoutes);
 const userRoutes = require('./user-routes'); 
 
 // router.use('/api', apiRoutes);
-router.use('/api/users', userRoutes); 
+router.use('/users', userRoutes); 
 
 
 
