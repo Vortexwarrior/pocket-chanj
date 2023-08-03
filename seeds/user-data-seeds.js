@@ -1,4 +1,4 @@
-const {User} = require('../models/indexnew');
+const {User} = require('../models');
 
 const userData = [
     {

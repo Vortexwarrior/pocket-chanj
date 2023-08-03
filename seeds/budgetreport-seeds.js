@@ -1,4 +1,4 @@
-const { BudgetReport } = require('../models/indexnew');
+const { BudgetReport } = require('../models');
 
 const budgetReportData = [
     {
