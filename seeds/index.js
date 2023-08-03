@@ -1,7 +1,7 @@
-const seedBudgetReport = require('./budgetreport-seeds');
-const seedExpenses = require('./expenses-seeds');
-const seedIncome = require('./income-seeds');
-const seedUserData = require('./user-data-seeds');
+const seedBudgetReport = require('./budgetreport-seeds.js');
+const seedExpenses = require('./expenses-seeds.js');
+const seedIncome = require('./income-seeds.js');
+const seedUserData = require('./user-data-seeds.js');
 
 const sequelize = require('../config/connection');
 
