@@ -27,15 +27,29 @@ router.get('/index', withAuth, async (req, res) => {
 
 // ---- LOGIN ROUTE ----
 router.get('/login', (req, res) => {
-//  if (req.session.logged_in) {
-   // res.redirect('/');
- //   return;
-  //}
 
   res.render('login');
 });
-router.get('/userprofile', (req,res) => {
-  res.render('userprofile')
-})
+
+router.get('/userprofile', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclued: ['password'] },
+    });
+
+    const user =userData.get({ plain: true });
+
+    res.render('userprofile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// router.get('/userprofile', withAuth, (req,res) => {
+//   res.render('userprofile', {userName: req.session.username });
+// })
 
 module.exports = router;
