@@ -4,23 +4,8 @@ const router = express.Router();
 const apiRoutes = require('./api/index');
 const homeroutes = require('./homeRoutes')
 
-router.use('/api', apiRoutes);
 router.use('/', homeroutes);
-//Placeholder Code for testing api
-// router.get('/api', (req, res) => {
-//     res.json({ message: "This is the API response!" });
-// });
+router.use('/api', apiRoutes);
 
-
-
-// router.use((req, res) => {
-//     res.send("<h1>Wrong Route!</h1>")
-//   });
-
-
-// Homepage route
-router.get('/', (req, res) => {
-    res.render('index');
-});
 
 module.exports = router;
