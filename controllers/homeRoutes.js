@@ -2,6 +2,10 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Homepage route
+router.get('/', (req, res) => {
+    res.render('index');
+});
 
 router.get('/index', withAuth, async (req, res) => {
   try {
