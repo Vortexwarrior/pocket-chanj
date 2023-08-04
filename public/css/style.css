@@ -7,70 +7,114 @@
     
   }
 
-  .login-card {
+  /* ---- SIGNUP FORM ---- */
+.signup-form {
     
-    margin: 0 0px 20px 300px;
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 5px;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: double;
-    border-width: thick;
-    background-color: #2ca7ae;
-    color: rgb(92, 67, 6);
+/* margin: 0 0px 20px 300px;
+flex: 0 0 50%; */
+
+display: flex; 
+justify-content: center;
+flex-direction: column;
+margin: auto;
+width: 40%;
+padding: 5px;
+border: 3px solid var(--dark);
+border-radius: var(--border-radius);
+border-style: double;
+border-width: thick;
+background-color: #2ca7ae;
+color: rgb(92, 67, 6);
+}
+
+.page-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.form-input {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 0px 10px 0px;
   }
 
-  .page-title {
-   text-align: center;
-   font-size: 30px;
-  }
-  .form-group {
-    margin-left: 15px;
-  }
+#formTitle {
+  text-align: center;
+}
 
-  .btn-primary {
-    margin-bottom: 15px;
-  }
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 10px 0px;
+}
 
- 
+.btn-primary {
+  text-align: center;
+  margin-bottom: auto;
+  width: 43%;
+}
+/* ---- LOGIN FORM ---- */
+.login-form {
+    
+display: flex; 
+justify-content: center;
+flex-direction: column;
+margin: auto;
+width: 40%;
+padding: 5px;
+border: 3px solid var(--dark);
+border-radius: var(--border-radius);
+border-style: double;
+border-width: thick;
+background-color: #2ca7ae;
+color: rgb(92, 67, 6);
+}
+
   
-  h1 {
-    text-align: center;
-    color: purple;
-    margin-top: 40PX;
-  }
+h1 {
+  text-align: center;
+  color: purple;
+  margin-top: 40PX;
+}
 
 
-  h2 {
-    text-align: center; 
-    color: purple;
-  }
+h2 {
+  text-align: center; 
+  color: purple;
+  margin: auto; 
+}
 
-  nav {
-   text-align: center;
-   font-size: 25px;
-   margin-left: 15px;
-  }
+nav {
+  text-align: center;
+  font-size: 25px;
+  margin-left: 15px;
+}
 
-  p {
-    text-align: center;
-    
-  }
+p {
+  text-align: center;
+  
+}
 
 
 body {
-    background-color: rgb(184, 237, 212);
+  background-color: rgb(184, 237, 212);
 }
 
 header {
-    background-color: rgb(142, 136, 145);
-    text-align: center;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: double;
-    border-width: thick;
-    margin: 0;
-    padding: 10px 0;
+  background-color: rgb(142, 136, 145);
+  text-align: center;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  margin: 0;
+  padding: 10px 0;
 }
 

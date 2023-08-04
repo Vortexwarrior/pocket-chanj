@@ -1,4 +1,27 @@
- <div class="row justify-space-between-md">
+
+{{!-- JV ---- LOGIN FORM ---- --}}
+<div class="col-md-6">
+    <h2 class="page-title">Login</h2>
+
+    <form class="login-form">
+        <div class="form-group">
+            <label for="email-login" id="formTitle">email:</label>
+            <input class="form-input" type="text" id="email-login" />
+        </div>
+        <div class="form-group">
+            <label for="password-login" id="formTitle">password:</label>
+            <input class="form-input" type="password" id="password-login" />
+        </div>
+        {{!-- login --}}
+        <div class="button-group">
+            <button class="btn btn-primary" type="submit" id="loginButton">login</button>
+        </div>
+    </form>
+</div>
+
+
+
+{{!-- <div class="row justify-space-between-md">
   <div class="login-card">
     <h2 class="page-title">Login</h2>
     <form class="form login-form">
@@ -14,6 +37,8 @@
         <button class="btn btn-primary" type="submit">login</button>
       </div>
     </form>
-  </div>
+  </div> --}}
 
   <script src="/js/login.js"></script>
+
+  {{> footer}}
