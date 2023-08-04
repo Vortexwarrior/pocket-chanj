@@ -21,7 +21,11 @@ router.get('/', async (req, res) =>{
     const userData = await User.findAll({
       include: [{
         model: Expenses
-      }]
+      }, 
+    {
+      model: Income,
+    },
+  ]
     });
     res.status(200).json(userData);
   } catch (err) {
