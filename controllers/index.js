@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
+
 const apiRoutes = require('./api/index');
 const homeroutes = require('./homeRoutes')
+
 router.use('/api', apiRoutes);
 router.use('/', homeroutes);
 //Placeholder Code for testing api
@@ -16,7 +18,7 @@ router.use('/', homeroutes);
 //   });
 
 
-//Homepage route
+// Homepage route
 router.get('/', (req, res) => {
     res.render('index');
 });

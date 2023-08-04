@@ -1,31 +1,36 @@
 
-
-
+{{!-- JV ---- SIGNUP FORM ---- --}}
 <h2>Let's ch-Change your pockets!</h2>
 <p>Simply "Login" OR "Sign-Up" below!</p>
 
-
-  <div class="login-card">
+  <form class="signup-form">
+    
     <h2 class="page-title">Signup</h2>
     <form class="form signup-form" action="/api/users/signup" method="POST">
+
       <div class="form-group">
-        <label for="username-signup">Username:</label>
+        <label for="username-signup" id="formTitle">Username:</label>
         <input class="form-input" type="text" id="username-signup" name="username" />
       </div>
+
       <div class="form-group">
-        <label for="email-signup">Email:</label>
+        <label for="email-signup" id="formTitle">Email:</label>
         <input class="form-input" type="text" id="email-signup" name="email" />
       </div>
+
       <div class="form-group">
-        <label for="password-signup">Password:</label>
+        <label for="password-signup" id="formTitle">Password:</label>
         <input class="form-input" type="password" id="password-signup" name="password" />
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+      {{!-- signup button --}}
+      <div class="button-group">
+        <button class="btn btn-primary" type="submit" id="signupButton">signup</button>
       </div>
+      
     </form>
-  </div>
-</div>
+  </form>
+  
+
 
 <script src="/js/signup.js"></script>
 

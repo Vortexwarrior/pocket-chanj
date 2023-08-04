@@ -6,18 +6,34 @@ require('dotenv').config();
 //Turning sequelize to if else format allows it to go to either heroku or local environments -JR
 let sequelize;
 
+// if (process.env.JAWSDB_URL) {
+//   //Use the JAWSDB for the db connect when on Heroku
+//   sequelize = new Sequelize(process.env.JAWSDB_URL, {
+//     dialect: 'mysql',
+//   });
+// } else {
+//   //Use local db credentials when running locally
+//   sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+//     host: 'localhost',
+//     dialect: 'mysql',
+//     port: 3306,
+//   });
+// }
+
+// JV ---- 
 if (process.env.JAWSDB_URL) {
-  //Use the JAWSDB for the db connect when on Heroku
-  sequelize = new Sequelize(process.env.JAWSDB_URL, {
-    dialect: 'mysql',
-  });
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
-  //Use local db credentials when running locally
-  sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
-    host: 'localhost',
-    dialect: 'mysql',
-    port: 3306,
-  });
+  sequelize = new Sequelize(
+      process.env.DB_NAME,
+      process.env.DB_USER,
+      process.env.DB_PASSWORD,
+      {
+          host: 'localhost',
+          dialect: 'mysql',
+          port: 3306
+      }
+  );
 }
 
 
