@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // if succcessful, redirect the broswer to the profile page
-        document.location.replace('/chart');
+        document.location.replace('/userprofile');
       } else {
         alert('Failed to log in');
       }

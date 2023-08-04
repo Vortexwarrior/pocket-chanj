@@ -30,8 +30,8 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-router.get('/chart', (req,res) => {
-  res.render('chart')
+router.get('/userprofile', (req,res) => {
+  res.render('userprofile')
 })
 
 module.exports = router;
