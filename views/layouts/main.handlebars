@@ -14,31 +14,21 @@
         <h1>&#x1F4B8 Pocket Change &#x1F4B8</h1>
         <nav>
             <a href="/">Home</a>
-            {{#if loggedIn}}
-            <a href="/userprofile">profile</a>
+            {{#if logged_in}}
             <button id="logout" class="btn-no-style">Logout</button>
             {{else}}
             <a href="/login">Login</a>
             {{/if}}
         </nav>
     </header>
-   <div>
-  <canvas id="myChart"></canvas>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    
     <main>
-
+        {{{body}}}
     </main>
 
     {{#if logged_in}}
-
-    <button class="btn" id="logout">logout</button>
-
+    <script src="/js/logout.js"></script>
     {{/if}}
-    {{{body}}}
-
 </body>
 
 </html>
