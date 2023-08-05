@@ -1,3 +1,42 @@
+
+
+<div class="budgetreport-container">
+
+    <div class="income-container">
+
+        <h2>Income</h2>
+        <form class="incomes-input">
+            <div class="field">
+                {{!-- ---FORM GROUP ADDED --}}
+                <div class="form-group">
+                    <label for="source-name" id="formTitle">Income Name:</label>
+                    <input class="sourcename-input" type="text" id="source-name" name="source-name" />
+                    <label for="source-name" id="formTitle">Income Amount:</label>
+                    <input class="amount-input" type="number" id="source-amount" name="source-amount" />
+                    <span onclick="addField(this)" id="onclickButton">+</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="expenses-container">
+
+        <h2>Expenses</h2>
+        <form class="expenses-input">
+            {{!-- ---FORM GROUP ADDED --}}
+            <div class="form-group">
+                <label for="source-name" id="formTitle">Expense Name:</label>
+                <input class="sourcename-input" type="text" id="source-name" name="source-name" />
+                <label for="source-name" id="formTitle">Expense Amount:</label>
+                <input class="amount-input" type="number" id="source-amount" name="source-amount" />
+                <span onclick="addFieldE(this)" id="onclickButton">+</span>
+            </div>
+        </form>
+    </div>
+
+    <div class="save-button">
+        <button type="save" class="btn btn-primary" id="saveProfile">Save</button>
+
 <h3>Hello, {{ username }}</h3>
 <div class="budgetreport - container">
     <div class="incomes - container">
@@ -24,11 +63,14 @@
     </div>
     <div class="save-button">
         <button type="save" class="btn btn-primary">Save</button>
+
     </div>
     <div class="chart - container">
 
     </div>
+
     <script src="/js/userprofile.js"></script>
 
     <div class="myChart - container"></div>
+
 </div>

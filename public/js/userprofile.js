@@ -10,7 +10,9 @@ function addField(plusElement) {
 
     // creating the div container.
     let div = document.createElement("div");
-    div.setAttribute("class", "income - container");
+
+    div.setAttribute("class", "form-group");
+
 
     //create the label income name element
     let labelIncome = document.createElement("label");
@@ -86,8 +88,10 @@ function fetchTextNotes(event) {
     let out = "";
     for (let note of notes) {
         out += `
+
 			<p>${note} <span onclick="markAsDone(this)">Mark as done</span></p>
 		`;
+
     }
     document.querySelector(".notes").innerHTML = out;
 
@@ -116,7 +120,10 @@ function addFieldE(plusElement) {
 
     // creating the div container.
     let div2 = document.createElement("div");
-    div2.setAttribute("class", "expenses - container");
+
+    div2.setAttribute("class", "form-group");
+
+
 
     //create the label expense name element
     let labelExpense = document.createElement("label");
@@ -183,8 +190,10 @@ function fetchTextNotes(event) {
     let out = "";
     for (let note of notes) {
         out += `
+
 			<p>${note} <span onclick="markAsDone(this)">Mark as done</span></p>
 		`;
+
     }
     document.querySelector(".notes").innerHTML = out;
 
@@ -197,4 +206,6 @@ function fetchTextNotes(event) {
             element.remove();
         }
     });
+
 }
+
