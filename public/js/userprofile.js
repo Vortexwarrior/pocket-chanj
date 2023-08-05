@@ -17,22 +17,22 @@ function addField(plusElement) {
     //create the label income name element
     let labelIncome = document.createElement("label");
     labelIncome.innerHTML = "Income Name:";
-    labelIncome.setAttribute("for", "source-name");
+    labelIncome.setAttribute("for", "income-source-name");
 
     // Creating the input income name element.
     let incomeName = document.createElement("input");
     incomeName.setAttribute("type", "text");
-    incomeName.setAttribute("name", "source-name");
+    incomeName.setAttribute("name", "income-source-name");
 
     //create the label income amount element
     let labelAmount = document.createElement("label");
     labelAmount.innerHTML = "Income Amount:";
-    labelAmount.setAttribute("for", "source-amount");
+    labelAmount.setAttribute("for", "income-source-amount");
 
     // Creating the input income amount element.
     let field = document.createElement("input");
-    field.setAttribute("type", "text");
-    field.setAttribute("name", "source-name");
+    field.setAttribute("type", "number");
+    field.setAttribute("name", "income-source-amount");
 
 
     // Creating the plus span element.
@@ -128,22 +128,22 @@ function addFieldE(plusElement) {
     //create the label expense name element
     let labelExpense = document.createElement("label");
     labelExpense.innerHTML = "Expense Name:";
-    labelExpense.setAttribute("for", "source-name");
+    labelExpense.setAttribute("for", "expense-source-name");
 
     // Creating the input expense amount element.
     let expenseName = document.createElement("input");
     expenseName.setAttribute("type", "text");
-    expenseName.setAttribute("name", "source-amount");
+    expenseName.setAttribute("name", "expense-source-amount");
 
     //create the label expense name element
-    let expenseAmount = document.createElement("label");
-    expenseAmount.innerHTML = "Expense Amount:";
-    expenseAmount.setAttribute("for", "source-amount");
+    let labelExpenseAmount = document.createElement("label");
+    labelExpenseAmount.innerHTML = "Expense Amount:";
+    labelExpenseAmount.setAttribute("for", "expense-source-amount");
 
     // Creating the input expense amount element.
     let amount = document.createElement("input");
-    amount.setAttribute("type", "text");
-    amount.setAttribute("name", "source-amount");
+    amount.setAttribute("type", "number");
+    amount.setAttribute("name", "expense-source-amount");
 
     // Creating the plus span element.
     let plus = document.createElement("span");
@@ -215,10 +215,10 @@ saveButton.addEventListener("click", formHandler)
 function formHandler(event){
     event.preventDefault();
 
-    const incomeNames = document.querySelectorAll(".sourcename-input").value;
-    const incomeAmounts = document.querySelectorAll(".amount-input").value;
-    const expenseNames = document.querySelectorAll(".sourcename-input").value;
-    const expenseAmounts = document.querySelectorAll(".amount-input").value;
+    const incomeNames = document.querySelectorAll(".sourcename-input");
+    const incomeAmounts = document.querySelectorAll(".amount-input");
+    const expenseNames = document.querySelectorAll(".sourcename-input");
+    const expenseAmounts = document.querySelectorAll(".amount-input");
     console.log({incomeNames});
     console.log({incomeAmounts});
     console.log({expenseNames});
