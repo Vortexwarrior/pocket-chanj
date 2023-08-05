@@ -1,6 +1,6 @@
 function addField(plusElement) {
 
-    let displayButton = document.querySelector("incomes");
+    let displayButton = document.querySelector(".incomes");
 
 
     // Stopping the function if the input field has no value.
@@ -112,7 +112,7 @@ function fetchTextNotes(event) {
 // }
 function addFieldE(plusElement) {
 
-    let displayExpenses = document.querySelector("expenses");
+    let displayExpenses = document.querySelector(".expenses");
     // Stopping the function if the input field has no value.
     if (plusElement.previousElementSibling.value.trim() === "") {
         return false;
@@ -215,10 +215,10 @@ saveButton.addEventListener("click", formHandler)
 function formHandler(event){
     event.preventDefault();
 
-    const incomeNames = document.querySelectorAll(".sourcenameI").value;
-    const incomeAmounts = document.querySelectorAll(".amountI").value;
-    const expenseNames = document.querySelectorAll(".sourcenameE").value;
-    const expenseAmounts = document.querySelectorAll(".amountE").value;
+    const incomeNames = document.querySelectorAll(".sourcename-input").value;
+    const incomeAmounts = document.querySelectorAll(".amount-input").value;
+    const expenseNames = document.querySelectorAll(".sourcename-input").value;
+    const expenseAmounts = document.querySelectorAll(".amount-input").value;
     console.log({incomeNames});
     console.log({incomeAmounts});
     console.log({expenseNames});
