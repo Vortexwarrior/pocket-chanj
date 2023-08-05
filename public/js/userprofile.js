@@ -198,3 +198,23 @@ function fetchTextNotes(event) {
         }
     });
 }
+
+let saveButton = document.querySelector(".save-button");
+saveButton.addEventListener("click", formHandler)
+
+function formHandler(event){
+    event.preventDefault();
+
+    const incomeNames = document.querySelectorAll(".sourcenameI").value;
+    const incomeAmounts = document.querySelectorAll(".amountI").value;
+    const expenseNames = document.querySelectorAll(".sourcenameE").value;
+    const expenseAmounts = document.querySelectorAll(".amountE").value;
+    console.log({incomeNames});
+    console.log({incomeAmounts});
+    console.log({expenseNames});
+    console.log({expenseAmounts});
+    
+}
+
+
+
