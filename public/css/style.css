@@ -55,6 +55,13 @@ color: rgb(92, 67, 6);
   margin: 20px 0px 10px 0px;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 5%;
+}
+
 .btn-primary {
   text-align: center;
   margin-bottom: auto;
@@ -139,6 +146,13 @@ h2 {
   text-align: center; 
   color: purple;
   margin: auto; 
+}
+
+h3 {
+  text-align: center; 
+  color: purple;
+  margin: auto;
+  margin-top: 2%; 
 }
 
 nav {

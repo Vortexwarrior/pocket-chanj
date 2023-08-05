@@ -1,4 +1,4 @@
-
+<h3> Hello, {{ username }} </h3>
 
 <div class="budgetreport-container">
 
@@ -36,9 +36,11 @@
 
     <div class="save-button">
         <button type="save" class="btn btn-primary" id="saveProfile">Save</button>
+    </div>
 
-<h3>Hello, {{ username }}</h3>
-<div class="budgetreport - container">
+
+{{!-- dupliated tables --}}
+{{!-- <div class="budgetreport - container">
     <div class="incomes - container">
         <h2>Incomes</h2>
         <form class="incomes-input">
@@ -61,15 +63,21 @@
             <span onclick="addFieldE(this)">+</span>
         </form>
     </div>
-    <div class="save-button">
-        <button type="save" class="btn btn-primary">Save</button>
+</div>
 
-    </div>
+{{!-- duplicate save button --}}
+<div class="save-button">
+    <button type="save" class="btn btn-primary">Save</button>
+
+</div> --}}
+
     <div class="chart - container">
 
     </div>
 
     <script src="/js/userprofile.js"></script>
+
+
 
     <div class="myChart-container"></div>
 <!-- chart examples below, Incomplete and not yet dynamic they at least give us all an idea of what the code and output looks like -->
@@ -110,3 +118,4 @@
          },
       });
    </script>
+
