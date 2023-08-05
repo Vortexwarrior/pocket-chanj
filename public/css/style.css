@@ -60,6 +60,14 @@ color: rgb(92, 67, 6);
   margin-bottom: auto;
   width: 43%;
 }
+
+/* SAVE PROFILE BUTTON */
+#saveProfile {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 /* ---- LOGIN FORM ---- */
 .login-form {
     
@@ -75,6 +83,48 @@ border-style: double;
 border-width: thick;
 background-color: #2ca7ae;
 color: rgb(92, 67, 6);
+}
+#onclickButton {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px 0px 0px;
+}
+
+/* ---- INCOME INPUT ---- */
+.incomes-input {
+display: flex; 
+justify-content: center;
+flex-direction: column;
+margin: auto;
+margin-bottom: 2%;
+margin-top: 2%;
+width: 40%;
+padding: 5px;
+border: 3px solid var(--dark);
+border-radius: var(--border-radius);
+border-style: double;
+border-width: thick;
+background-color: #2ca7ae;
+color: rgb(92, 67, 6);
+}
+
+/* ---- EXPENSES INPUT ---- */
+
+.expenses-input {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 40%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #2ca7ae;
+  color: rgb(92, 67, 6);
 }
 
   
