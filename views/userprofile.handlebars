@@ -11,9 +11,9 @@
             <div class="field">
                 {{! ---FORM GROUP ADDED }}
                 <div class="form-group">
-                    <label for="income-source-name" id="formTitle">Income Name:</label>
+                    <label for="income-source-name" id="income-name">Income Name:</label>
                     <input class="sourcename-input" type="text" id="income-source-name" name="income-source-name" />
-                    <label for="income-source-amount" id="formTitle">Income Amount:</label>
+                    <label for="income-source-amount" id="income-amount">Income Amount:</label>
                     <input class="amount-input" type="number" id="income-source-amount" name="income-source-amount" />
                     <span onclick="addField(this)" id="onclickButton">+</span>
                 </div>
@@ -25,14 +25,14 @@
 
         <h2>Expenses</h2>
         <form class="expenses-input">
-            {{! ---FORM GROUP ADDED }}
-            <div class="form-group">
-                <label for="expense-source-name" id="formTitle">Expense Name:</label>
-                <input class="sourcename-input" type="text" id="expense-source-name" name="expense-source-name" />
-                <label for="expense-source-name" id="formTitle">Expense Amount:</label>
-                <input class="amount-input" type="number" id="expense-source-amount" name="expense-source-amount" />
-                <span onclick="addFieldE(this)" id="onclickButton">+</span>
-            </div>
+                {{! ---FORM GROUP ADDED }}
+                <div class="form-group">
+                    <label for="expense-source-name" id="formTitle">Expense Name:</label>
+                    <input class="sourcename-input" type="text" id="expense-source-name" name="expense-source-name" />
+                    <label for="expense-source-name" id="formTitle">Expense Amount:</label>
+                    <input class="amount-input" type="number" id="expense-source-amount" name="expense-source-amount" />
+                    <span onclick="addFieldE(this)" id="onclickButton">+</span>
+                </div>
         </form>
     </div>
 
