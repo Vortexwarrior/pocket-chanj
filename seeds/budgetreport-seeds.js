@@ -2,11 +2,12 @@ const { BudgetReport } = require('../models');
 
 const budgetReportData = [
     {
-        total_income: '50000.00',
+        income_name: 'test income',
+        income_amount: '2.00',
+        expense_name: 'test expense',
+        expense_amount: '2.00',
+        user_id: 9
     },
-    {
-        total_expense: '5000.00',
-    }
 ];
 
 const seedBudgetReport = () => BudgetReport.bulkCreate(budgetReportData);

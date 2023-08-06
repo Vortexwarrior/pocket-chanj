@@ -5,6 +5,14 @@ const Expenses = require('./Expenses');
 const Income = require('./Income');
 const User = require('./User');
 
+BudgetReport.belongsTo(User,{
+  foreignKey:'user_id',
+  });
+
+User.belongsTo(BudgetReport,{
+  foreignKey:'budgetreport_id',
+})
+
 Expenses.belongsTo(User, {
   foreignKey:'user_id',
 });
