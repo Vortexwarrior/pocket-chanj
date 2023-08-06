@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { BudgetReport } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //Route to get all incomes
 router.get('/', async (req, res) => {
@@ -21,9 +22,12 @@ router.get('/:id', async (req, res) =>{
 });
 
 //Route to create new income
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
-      const budgetReportData = await BudgetReport.create(req.body);
+      const budgetReportData = await BudgetReport.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
       res.status(200).json(budgetReportData);
     } catch (err) {
       res.status(400).json(err);
