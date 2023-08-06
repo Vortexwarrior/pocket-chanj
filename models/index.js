@@ -9,8 +9,9 @@ BudgetReport.belongsTo(User,{
   foreignKey:'user_id',
   });
 
-User.belongsTo(BudgetReport,{
-  foreignKey:'budgetreport_id',
+User.hasMany(BudgetReport,{
+  foreignKey:'user_id',
+  onDelete: 'CASCADE'
 })
 
 Expenses.belongsTo(User, {

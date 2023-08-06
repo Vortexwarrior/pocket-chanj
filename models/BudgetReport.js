@@ -14,9 +14,6 @@ BudgetReport.init(
         income_name: {
             type: DataTypes.STRING,
             allowNull: true,
-                validate: {
-                    isDecimal: true,
-                }
         },
         income_amount: {
             type: DataTypes.DECIMAL,
@@ -28,9 +25,6 @@ BudgetReport.init(
         expense_name: {
             type: DataTypes.STRING,
             allowNull: true,
-                validate: {
-                    isDecimal: true,
-                }
         },
         expense_amount: {
             type: DataTypes.DECIMAL,
@@ -52,7 +46,7 @@ BudgetReport.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'BudgetReport',
+        modelName: 'budgetreport',
     }
 
 )
