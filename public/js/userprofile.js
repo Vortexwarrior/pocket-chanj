@@ -221,7 +221,7 @@ const newFormHandler = async (event) => {
     console.log(expense_name, expense_amount)
 
     if (income_name && income_amount && expense_name && expense_amount){
-        const response = await fetch(`/api/BudgetReport`, {
+        const response = await fetch(`/api/budgetreports`, {
             method: 'POST',
             body: JSON.stringify({ income_name, income_amount, expense_name, expense_amount }),
             headers: {
@@ -230,7 +230,7 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/userprofile');
+            document.location.replace('/chart');
         } else {
             alert('Failed to POST project');
         }
