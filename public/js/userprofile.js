@@ -1,3 +1,4 @@
+// ----- INCOME FROM ----- 
 function addField(plusElement) {
 
     let displayButton = document.querySelector(".incomes");
@@ -106,10 +107,7 @@ function fetchTextNotes(event) {
     });
 }
 
-// function markAsDone(element) {
-//     element.classList.add("mark");
-//     element.innerHTML = "&check;";
-// }
+// ----- EXPENSES FORM -----
 function addFieldE(plusElement) {
 
     let displayExpenses = document.querySelector(".expenses");
@@ -136,9 +134,9 @@ function addFieldE(plusElement) {
     expenseName.setAttribute("name", "expense-source-amount");
 
     //create the label expense name element
-    let labelExpenseAmount = document.createElement("label");
-    labelExpenseAmount.innerHTML = "Expense Amount:";
-    labelExpenseAmount.setAttribute("for", "expense-source-amount");
+    let expenseAmount = document.createElement("label");
+    expenseAmount.innerHTML = "Expense Amount:";
+    expenseAmount.setAttribute("for", "expense-source-amount");
 
     // Creating the input expense amount element.
     let amount = document.createElement("input");
@@ -209,8 +207,6 @@ function fetchTextNotes(event) {
 
 }
 
-let saveButton = document.querySelector(".save-button");
-saveButton.addEventListener("click", formHandler)
 
 function formHandler(event){
     event.preventDefault();
@@ -226,3 +222,33 @@ function formHandler(event){
     
 }
 
+// ---- SAVE INPUT INFORMATION ----
+// 
+const newFormHandler = async (event) => {
+    event.preventDefault();
+
+    const name = document.querySelector('#income-name').value;
+    const amount = document.querySelector('#income-amount').value;
+
+    if (name && amount) {
+        const response = await fetch(`/api/income`, {
+            method: 'POST',
+            body: JSON.stringify({ name, amount }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+
+        if (response.ok) {
+            console.log('dataPOST');
+            document.location.replace('/userprofile');
+        } else {
+            alert('Failed to delete project');
+        }
+    }
+}
+
+// ---SAVE BUTTON ----
+
+let saveButton = document.querySelector(".save-button");
+saveButton.addEventListener("click", newFormHandler)
