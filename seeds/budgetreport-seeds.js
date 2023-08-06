@@ -6,7 +6,6 @@ const budgetReportData = [
         income_amount: '2.00',
         expense_name: 'test expense',
         expense_amount: '2.00',
-        user_id: 9
     },
 ];
 
