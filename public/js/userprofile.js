@@ -208,33 +208,22 @@ function fetchTextNotes(event) {
 }
 
 
-// function formHandler(event){
-//     event.preventDefault();
-
-//     const incomeNames = document.querySelectorAll(".sourcename-input");
-//     const incomeAmounts = document.querySelectorAll(".amount-input");
-//     const expenseNames = document.querySelectorAll(".sourcename-input");
-//     const expenseAmounts = document.querySelectorAll(".amount-input");
-//     console.log({incomeNames});
-//     console.log({incomeAmounts});
-//     console.log({expenseNames});
-//     console.log({expenseAmounts});
-    
-// }
-
 // ---- SAVE INPUT INFORMATION ----
 // 
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#income-source-name').value;
-    const amount = document.querySelector('#income-source-amount').value;
-    console.log(name, amount);
+    const income_name = document.querySelector('#income-source-name').value;
+    const income_amount = document.querySelector('#income-source-amount').value;
+    console.log(income_name, income_amount);
+    const expense_name = document.querySelector('#expense-source-name').value;
+    const expense_amount =document.querySelector('#expense-source-amount').value;
+    console.log(expense_name, expense_amount)
 
-    if (name && amount) {
-        const response = await fetch(`/api/income`, {
+    if (income_name && income_amount && expense_name && expense_amount){
+        const response = await fetch(`/api/BudgetReport`, {
             method: 'POST',
-            body: JSON.stringify({ name, amount }),
+            body: JSON.stringify({ income_name, income_amount, expense_name, expense_amount }),
             headers: {
                 'Content-Type': 'application/json'
             },

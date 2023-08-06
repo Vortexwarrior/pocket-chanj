@@ -11,19 +11,40 @@ BudgetReport.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        total_income: {
+        income_name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+                validate: {
+                    isDecimal: true,
+                }
+        },
+        income_amount: {
             type: DataTypes.DECIMAL,
             allowNull: true,
                 validate: {
                     isDecimal: true,
                 }
         },
-        total_expense: {
+        expense_name: {
+            type: DataTypes.STRING,
+            allowNull: true,
+                validate: {
+                    isDecimal: true,
+                }
+        },
+        expense_amount: {
             type: DataTypes.DECIMAL,
             allowNull: true,
                 validate: {
                     isDecimal: true,
                 }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references:{
+                model: 'user',
+                key: 'id',
+            }
         }
     },
     {
@@ -31,7 +52,7 @@ BudgetReport.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'budgetreport',
+        modelName: 'BudgetReport',
     }
 
 )
