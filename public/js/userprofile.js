@@ -230,7 +230,7 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/chart');
+            document.location.replace('/userprofile');
         } else {
             alert('Failed to POST project');
         }
