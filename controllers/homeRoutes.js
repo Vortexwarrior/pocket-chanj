@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, BudgetReport } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Homepage route
@@ -35,6 +35,7 @@ router.get('/userprofile', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclued: ['password'] },
+      include: [{model: BudgetReport}],
     });
 
     const user =userData.get({ plain: true });
