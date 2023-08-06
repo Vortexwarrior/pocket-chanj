@@ -208,27 +208,28 @@ function fetchTextNotes(event) {
 }
 
 
-function formHandler(event){
-    event.preventDefault();
+// function formHandler(event){
+//     event.preventDefault();
 
-    const incomeNames = document.querySelectorAll(".sourcename-input");
-    const incomeAmounts = document.querySelectorAll(".amount-input");
-    const expenseNames = document.querySelectorAll(".sourcename-input");
-    const expenseAmounts = document.querySelectorAll(".amount-input");
-    console.log({incomeNames});
-    console.log({incomeAmounts});
-    console.log({expenseNames});
-    console.log({expenseAmounts});
+//     const incomeNames = document.querySelectorAll(".sourcename-input");
+//     const incomeAmounts = document.querySelectorAll(".amount-input");
+//     const expenseNames = document.querySelectorAll(".sourcename-input");
+//     const expenseAmounts = document.querySelectorAll(".amount-input");
+//     console.log({incomeNames});
+//     console.log({incomeAmounts});
+//     console.log({expenseNames});
+//     console.log({expenseAmounts});
     
-}
+// }
 
 // ---- SAVE INPUT INFORMATION ----
 // 
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector('#income-name').value;
-    const amount = document.querySelector('#income-amount').value;
+    const name = document.querySelector('#income-source-name').value;
+    const amount = document.querySelector('#income-source-amount').value;
+    console.log(name, amount);
 
     if (name && amount) {
         const response = await fetch(`/api/income`, {
@@ -240,15 +241,14 @@ const newFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            console.log('dataPOST');
             document.location.replace('/userprofile');
         } else {
-            alert('Failed to delete project');
+            alert('Failed to POST project');
         }
     }
 }
 
 // ---SAVE BUTTON ----
 
-let saveButton = document.querySelector(".save-button");
-saveButton.addEventListener("click", newFormHandler)
+let saveButton = document.querySelector("#saveProfile");
+saveButton.addEventListener("click", newFormHandler);
