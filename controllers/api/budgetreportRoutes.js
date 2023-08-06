@@ -11,6 +11,23 @@ router.get('/', async (req, res) => {
     }
 });
 
+// router.get('/:id', async (req, res) =>{
+//   try {
+//     const userData = await BudgetReport.findByPk(req.params.id,{
+//       include: [{
+//         model: Expenses
+//       }, 
+//     {
+//       model: Income,
+//     },
+// //   ]
+//     });
+//     res.status(200).json(userData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 //Route to create new income
 router.post('/', async (req, res) => {
     try {
