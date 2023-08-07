@@ -208,6 +208,20 @@ function fetchTextNotes(event) {
 }
 
 
+function formHandler(event){
+    event.preventDefault();
+
+    const incomeNames = document.querySelectorAll(".sourcename-input");
+    const incomeAmounts = document.querySelectorAll(".amount-input");
+    const expenseNames = document.querySelectorAll(".sourcename-input");
+    const expenseAmounts = document.querySelectorAll(".amount-input");
+    console.log({incomeNames});
+    console.log({incomeAmounts});
+    console.log({expenseNames});
+    console.log({expenseAmounts});
+    
+}
+
 // ---- SAVE INPUT INFORMATION ----
 // 
 const newFormHandler = async (event) => {

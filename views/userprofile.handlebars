@@ -3,9 +3,9 @@
 
 <div class="budgetreport-container">
 
-    <div class="income-container">
+    {{!---- INCOME CONTAINER  ----}}
 
-        
+    <div class="income-container">
         <form class="incomes-input">
             <div class="field">
                 {{! ---FORM GROUP ADDED }}
@@ -17,57 +17,70 @@
                     <input class="amount-input" type="number" id="income-source-amount" name="income-source-amount" />
                     <span onclick="addField(this)" id="onclickButton">+</span>
                 </div>
-
-                {{#if budgetreports.length}}
-                {{#each budgetreports as |budgetreport|}}
-                <div class="form-group">
-                    <label for="income-source-name" id="formTitle">Income Name:</label>
-                    <h4><a href="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_name}}</a></h4>
-
-                    <label for="income-source-amount" id="formTitle">Income Amount:</label>
-                    <h4><a href="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_amount}}</a></h4>
-                    <span onclick="addField(this)" id="onclickButton">+</span>
-                </div>
-                {{/each}}
-                {{/if}}
-
             </div>
         </form>
     </div>
 
+    {{!---- EXPENSES CONTAINER -----}}
+
     <div class="expenses-container">
-
-        
         <form class="expenses-input">
-
             {{! ---FORM GROUP ADDED }}
             <div class="form-group">
                 <h2>Expenses</h2>
                 <label for="expense-source-name" id="formTitle">Expense Name:</label>
                 <input class="sourcename-input" type="text" id="expense-source-name" name="expense-source-name" />
-                <label for="expense-source-name" id="formTitle">Expense Amount:</label>
+                <label for="expense-source-amount" id="formTitle">Expense Amount:</label>
                 <input class="amount-input" type="number" id="expense-source-amount" name="expense-source-amount" />
                 <span onclick="addFieldE(this)" id="onclickButton">+</span>
             </div>
 
-            {{#if budgetreports.length}}
-            {{#each budgetreports as |budgetreport|}}
-            <div class="form-group">
-                <label for="income-source-name" id="formTitle">Income Name:</label>
-                <h4><a href="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_name}}</a></h4>
-
-                <label for="income-source-amount" id="formTitle">Income Amount:</label>
-                <h4><a href="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_amount}}</a></h4>
-                <span onclick="addFieldE(this)" id="onclickButton">+</span>
-            </div>
-            {{/each}}
-            {{/if}}
-
+        <div class="save-button">
+            <button type="save" class="btn btn-primary" id="saveProfile">Save</button>
+        </div>
+        
         </form>
     </div>
-    <div class="save-button">
-        <button type="save" class="btn btn-primary" id="saveProfile">Save</button>
-    </div>
+
+
+
+</div>
+
+
+{{!----- REPONSE CONTAINER  -----}}
+
+<div class="reponse-container">
+
+    {{#if budgetreports.length}}
+    {{#each budgetreports as |budgetreport|}}
+        <div class="form-group" id="reponse-container">
+            <label for="income-source-name" id="formTitle">Income Name:</label>
+            
+            <h4><a src="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_name}}</a></h4>
+
+            <label for="income-source-amount" id="formTitle">Income Amount:</label>
+            
+            <h4><a src="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_amount}}</a></h4>
+            
+        </div>
+    {{/each}}
+    {{/if}}
+
+    {{#if budgetreports.length}}
+    {{#each budgetreports as |budgetreport|}}
+        <div class="form-group" id="response container">
+            <label for="expense-source-name" id="formTitle">Expense Name:</label>
+            
+            <h4><a src="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_name}}</a></h4>
+
+            <label for="expense-source-amount" id="formTitle">Expense Amount:</label>
+            
+            <h4><a src="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_amount}}</a></h4>
+            
+            <span onclick="addFieldE(this)" id="onclickButton">+</span>
+        </div>
+    {{/each}}
+    {{/if}}
 
 </div>
 
