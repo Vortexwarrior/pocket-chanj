@@ -47,8 +47,8 @@ margin: 10px 0px 10px 0px;
 }
 
 #formTitle {
-text-align: center;
-/* margin: 2px; */
+display: flex;
+justify-content: center;
 }
 
 .button-group {
@@ -134,11 +134,21 @@ background-color: #2ca7ae;
 color: rgb(92, 67, 6);
 }
 
-#response-container {
-  background-color: lightblue;
-  width: 50%;
-  height: 100%;
+/* .response-container {
+  display: flex;
+  justify-content: space-evenly;
+} */
+.response-income {
+  margin: auto;
+  padding: 5px;
 }
+.response-expense {
+  margin: auto;
+  padding: 5px;
+}
+
+
+
 
 h1 {
 text-align: center;
@@ -158,6 +168,10 @@ text-align: center;
 color: purple;
 margin: auto;
 margin-top: 2%; 
+}
+
+h4 {
+  text-align: center;
 }
 
 nav {
