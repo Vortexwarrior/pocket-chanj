@@ -62,10 +62,10 @@ THEN I am presented with the previously saved information
 
 # Pocket Change App Preview 
 * **Signup Page** 
-![Screen Grab functionality_1](/pocket-chanj/images/homepage.png) <br>
+![Screen Grab functionality_1](/images/homepage.png) <br>
 
 * **Budget Page** 
-![Screen Grab functionality_2](/pocket-chanj/images/chartspage.png) <br>
+![Screen Grab functionality_2](/images/chartspage.png) <br>
 
 ## Installation
 Clone this repo to your local machine, then open it in VS Code or any other code editor of your choosing: <br> (***Incase of no Heroku deployent/link***)
