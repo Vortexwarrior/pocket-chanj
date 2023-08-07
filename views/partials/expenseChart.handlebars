@@ -1,0 +1,58 @@
+<h3>Expense Bar Graph</h3>
+<canvas id="expenseGraph" aria - label="chart" height="50" width="180"></canvas>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let sources = [];
+        let expenseAmounts = [];
+
+        {{#each budgetreports as |budgetreport|}}
+            sources.push("{{budgetreport.expense_name}}");
+            expenseAmounts.push({{budgetreport.expense_amount}});
+        {{/each}}
+
+        var expenseGraph = {
+            labels: sources,
+            datasets: [{
+                label: "Income",
+                data: expenseAmounts,
+                backgroundColor: [
+                    'rgba(255, 26, 104, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(0, 0, 0, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 26, 104, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(0, 0, 0, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: expenseGraph,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true
+            }
+        };
+
+        const myChart = new Chart(
+            document.getElementById('expenseGraph'),
+            config
+        );
+    });
+</script>
