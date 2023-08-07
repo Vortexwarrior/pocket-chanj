@@ -22,6 +22,7 @@
 
 
 ### **_[LINK TO DEPLOYED APPLICATION](https://powerful-fjord-96372-1e2a1c430418.herokuapp.com/)_**
+### **_[LINK TO POWERPOINT PRESENTATION](https://docs.google.com/presentation/d/1TkHZfrLVx5Bl3V2MXjP7AA4ED1xi8uuSKqixiS8cob4/edit?usp=sharing)_**
 
 ## Description :
 
