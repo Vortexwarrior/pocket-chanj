@@ -5,55 +5,64 @@
 
     <div class="income-container">
 
-        <h2>Income</h2>
+        
         <form class="incomes-input">
             <div class="field">
                 {{! ---FORM GROUP ADDED }}
                 <div class="form-group">
+                    <h2>Income</h2>
                     <label for="income-source-name" id="formTitle">Income Name:</label>
                     <input class="sourcename-input" type="text" id="income-source-name" name="income-source-name" />
                     <label for="income-source-amount" id="formTitle">Income Amount:</label>
                     <input class="amount-input" type="number" id="income-source-amount" name="income-source-amount" />
                     <span onclick="addField(this)" id="onclickButton">+</span>
                 </div>
+
                 {{#if budgetreports.length}}
                 {{#each budgetreports as |budgetreport|}}
                 <div class="form-group">
                     <label for="income-source-name" id="formTitle">Income Name:</label>
                     <h4><a href="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_name}}</a></h4>
+
                     <label for="income-source-amount" id="formTitle">Income Amount:</label>
                     <h4><a href="/budgetreports/{{budgetreport.id}}">{{budgetreport.income_amount}}</a></h4>
                     <span onclick="addField(this)" id="onclickButton">+</span>
                 </div>
                 {{/each}}
                 {{/if}}
+
             </div>
         </form>
     </div>
 
     <div class="expenses-container">
 
-        <h2>Expenses</h2>
+        
         <form class="expenses-input">
+
             {{! ---FORM GROUP ADDED }}
             <div class="form-group">
+                <h2>Expenses</h2>
                 <label for="expense-source-name" id="formTitle">Expense Name:</label>
                 <input class="sourcename-input" type="text" id="expense-source-name" name="expense-source-name" />
                 <label for="expense-source-name" id="formTitle">Expense Amount:</label>
                 <input class="amount-input" type="number" id="expense-source-amount" name="expense-source-amount" />
                 <span onclick="addFieldE(this)" id="onclickButton">+</span>
             </div>
+
             {{#if budgetreports.length}}
             {{#each budgetreports as |budgetreport|}}
             <div class="form-group">
                 <label for="income-source-name" id="formTitle">Income Name:</label>
                 <h4><a href="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_name}}</a></h4>
+
                 <label for="income-source-amount" id="formTitle">Income Amount:</label>
                 <h4><a href="/api/budgetreports/{{budgetreport.id}}">{{budgetreport.expense_amount}}</a></h4>
                 <span onclick="addFieldE(this)" id="onclickButton">+</span>
             </div>
             {{/each}}
             {{/if}}
+
         </form>
     </div>
     <div class="save-button">
@@ -62,9 +71,9 @@
 
 </div>
 
-<div class="chart - container"></div>
-
 <script src="../js/userprofile.js"></script>
+
+
 
 
 
@@ -74,25 +83,41 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js"></script>
-<canvas id="incomeGraph" aria - label="chart" height="350" width="580"></canvas>
-<canvas id="expenseGraph" aria - label="chart" height="350" width="580"></canvas>
-{{#if budgetreports.length}}
-{{#each budgetreports as |budgetreport|}}
+<canvas id="incomeGraph" aria - label="chart" height="50" width="180"></canvas>
+<canvas id="expenseGraph" aria - label="chart" height="50" width="180"></canvas>
+{{!-- {{#if budgetreports.length}} --}}
+{{!-- {{#each budgetreports as |budgetreport|}} --}}
 <script>
-    var chrt = document.getElementById("incomeGraph");
-    var incomeGraph = new Chart(chrt, {
-        type: 'bar',
-        data: {
-            labels: [{{ income_name }}, "Uber", "eBay"],
+   // var chrt = document.getElementById("").getContext("2d");
+    var incomeGraph =  {
+        //How can we insert income data here
+            labels: ["/income-seeds/{{source_name}}","Uber", "eBay"],
         datasets: [{
             label: "Monthly Income",
             data: [6500, 750, 200],
-        }],
-    },
-        options: {
-        responsive: true,
-    },
-    });
+        backgroundColor: [
+        'rgba(255, 26, 104, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(0, 0, 0, 0.2)'
+        ],
+        borderColor: [
+        'rgba(255, 26, 104, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 1
+    }]
+    }
+    ;
+    
 </script>
 <script>
     var chrt = document.getElementById("expenseGraph");
@@ -103,7 +128,26 @@
         datasets: [{
             label: "Monthly Expenses",
             data: [500, 1250, 145, 900],
-        }],
+        backgroundColor: [
+        'rgba(255, 26, 104, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(0, 0, 0, 0.2)'
+        ],
+        borderColor: [
+        'rgba(255, 26, 104, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+        'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 1
+    }]
     },
         options: {
         responsive: true,
@@ -111,13 +155,25 @@
     });
     // Config
     const config = {
-        type: 'budgetreport',
-        data: data,
-        options: {}
-    };
+        type: 'bar',
+        data: incomeGraph,
+        options: {
+            scales: {   
+                y: {
+            beginAtZero: true
+        },  
+        
+        responsive: true,
+    }
+        }
+    }
+    ;
 
     // Render chart
-    const myChart = new Chart(chrt, config);
+    const myChart = new Chart(
+    document.getElementById('incomeGraph'),
+    config
+    );
 </script>
-{{/each}}
-{{/if}}
+{{!-- {{/each}} --}}
+{{!-- {{/if}} --}}

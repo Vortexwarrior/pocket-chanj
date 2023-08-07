@@ -1,6 +1,6 @@
-     <div class="chartMenu">
-     
-   </div>
+<div class="chartMenu">
+  
+  </div>
     <div class="chartCard">
       <div class="chartBox">
         <canvas id="myChart"></canvas>
@@ -8,7 +8,7 @@
        // NEED TO ADJUST,(THIS) SHOULD REFER TO barValue right now//
         <input id="barValue" onkeyup= "updateChart(this)" type="number">
         <input onkeyup= updateLable() type = text>
-       
+    
       </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
@@ -71,7 +71,7 @@ function updateChart(barValue) {
  function updateLable(labelName) {
   myChart.config.data.datasets[0].label = labelName.value;
   myChart.update();
- }
+}
     // Instantly assign Chart.js version
     const chartVersion = document.getElementById('chartVersion');
     chartVersion.innerText = Chart.version;
