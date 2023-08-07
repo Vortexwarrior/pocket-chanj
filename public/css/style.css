@@ -1,15 +1,15 @@
 :root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    
-  }
+  --primary: #3d5852;
+  --secondary: #86938f;
+  --light: #e3e4e3;
+  --dark: #182c23;
+  --error: rgb(228, 46, 1);
+  
+}
 
-  /* ---- SIGNUP FORM ---- */
+/* ---- SIGNUP FORM ---- */
 .signup-form {
-    
+  
 /* margin: 0 0px 20px 300px;
 flex: 0 0 50%; */
 
@@ -28,57 +28,57 @@ color: rgb(92, 67, 6);
 }
 
 .page-title {
-  text-align: center;
-  font-size: 30px;
+text-align: center;
+font-size: 30px;
 }
 
 .form-input {
-  text-align: center;
-  margin: auto;
-  width: 40%;
+text-align: center;
+margin: auto;
+width: 40%;
 }
 
 .form-group {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 10px 0px 10px 0px;
-  }
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 10px 0px 10px 0px;
+overflow: scroll;
+}
 
 #formTitle {
-  text-align: center;
-  /* margin: 2px; */
+text-align: center;
+/* margin: 2px; */
 }
 
 .button-group {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0px 10px 0px;
+display: flex;
+justify-content: center;
+margin: 20px 0px 10px 0px;
 }
 
 .btn {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  width: 5%;
+display: flex;
+justify-content: center;
+margin: auto;
+width: 5%;
 }
 
 .btn-primary {
-  text-align: center;
-  margin-bottom: auto;
-  width: 43%;
+text-align: center;
+margin-bottom: auto;
+width: 43%;
 }
 
 /* SAVE PROFILE BUTTON */
-#saveProfile {
-  display: flex;
-  justify-content: center;
-  margin: auto;
+.save-button {
+align-items: flex-end;
+margin: auto;
 }
 
 /* ---- LOGIN FORM ---- */
 .login-form {
-    
+  
 display: flex; 
 justify-content: center;
 flex-direction: column;
@@ -93,20 +93,22 @@ background-color: #2ca7ae;
 color: rgb(92, 67, 6);
 }
 #onclickButton {
+display: flex;
+justify-content: center;
+margin: 10px 0px 0px 0px;
+}
+
+.budgetreport-container {
   display: flex;
-  justify-content: center;
-  margin: 10px 0px 0px 0px;
+  justify-content: space-evenly;
 }
 
 /* ---- INCOME INPUT ---- */
 .incomes-input {
-display: flex; 
-justify-content: center;
-flex-direction: column;
 margin: auto;
 margin-bottom: 2%;
 margin-top: 2%;
-width: 40%;
+width: 500px;
 padding: 5px;
 border: 3px solid var(--dark);
 border-radius: var(--border-radius);
@@ -119,105 +121,108 @@ color: rgb(92, 67, 6);
 /* ---- EXPENSES INPUT ---- */
 
 .expenses-input {
-  display: flex; 
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  margin-bottom: 2%;
-  margin-top: 2%;
-  width: 40%;
-  padding: 5px;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  border-style: double;
-  border-width: thick;
-  background-color: #2ca7ae;
-  color: rgb(92, 67, 6);
+margin: auto;
+margin-bottom: 2%;
+margin-top: 2%;
+width: 500px;
+padding: 5px;
+border: 3px solid var(--dark);
+border-radius: var(--border-radius);
+border-style: double;
+border-width: thick;
+background-color: #2ca7ae;
+color: rgb(92, 67, 6);
 }
 
-  
+#response-container {
+  background-color: lightblue;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
+
 h1 {
-  text-align: center;
-  color: purple;
-  margin-top: 40PX;
+text-align: center;
+color: purple;
+margin-top: 40PX;
 }
 
 
 h2 {
-  text-align: center; 
-  color: purple;
-  margin: 0px 0px 10px 0px; 
+text-align: center; 
+color: purple;
+margin: 0px 0px 10px 0px; 
 }
 
 h3 {
-  text-align: center; 
-  color: purple;
-  margin: auto;
-  margin-top: 2%; 
+text-align: center; 
+color: purple;
+margin: auto;
+margin-top: 2%; 
 }
 
 nav {
-  text-align: center;
-  font-size: 25px;
-  margin-left: 15px;
+text-align: center;
+font-size: 25px;
+margin-left: 15px;
 }
 
 p {
-  text-align: center;
-  
+text-align: center;
+
 }
 
 
 body {
-  background-color: rgb(184, 237, 212);
+background-color: rgb(184, 237, 212);
 }
 
 header {
-  background-color: rgb(142, 136, 145);
-  text-align: center;
-  border: 3px solid var(--dark);
-  border-radius: var(--border-radius);
-  border-style: double;
-  border-width: thick;
-  margin: 0;
-  padding: 10px 0;
+background-color: rgb(142, 136, 145);
+text-align: center;
+border: 3px solid var(--dark);
+border-radius: var(--border-radius);
+border-style: double;
+border-width: thick;
+margin: 0;
+padding: 10px 0;
 }
 
 /*--Chart Styling--*/
 .chartMenu {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  width: 100vw;
-  height: 40px;
-  background: #1A1A1A;
-  color: rgba(54, 162, 235, 1);
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+width: 100vw;
+height: 40px;
+background: #1A1A1A;
+color: rgba(54, 162, 235, 1);
 }
 .chartMenu p {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  padding: 10px;
-  font-size: 20px;
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+padding: 10px;
+font-size: 20px;
 }
 .chartCard {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  width: 100vw;
-  height: calc(100vh - 40px);
-  background: rgba(54, 162, 235, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+width: 100vw;
+height: calc(100vh - 40px);
+background: rgba(54, 162, 235, 0.2);
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .chartBox {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  width: 700px;
-  padding: 20px;
-  border-radius: 20px;
-  border: solid 3px rgba(54, 162, 235, 1);
-  background: white;
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+width: 700px;
+padding: 20px;
+border-radius: 20px;
+border: solid 3px rgba(54, 162, 235, 1);
+background: white;
 }
