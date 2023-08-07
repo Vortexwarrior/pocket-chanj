@@ -62,6 +62,18 @@ router.get('/userprofile', withAuth, async (req, res) => {
       ],
     });
 
+    const budgetReportData = await BudgetReport.findAll({
+      include: [
+        {
+          model: User,
+          attribute: ['id'],
+          where: {
+            id: req.session.user_id,
+          }
+        }
+      ]
+    })
+
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { excluded: ['password'] },
       include: [{model: BudgetReport}],
@@ -71,12 +83,15 @@ router.get('/userprofile', withAuth, async (req, res) => {
 
     const incomes = incomeData.map((income) => income.get({ plain: true }));
 
+    const budgetReports = budgetReportData.map((budgetReport) => budgetReport.get({ plain: true }));
+
 
     const user =userData.get({ plain: true });
 
     res.render('userprofile', {
       expenses,
       incomes,
+      budgetReports,
       ...user,
       logged_in: true
     });

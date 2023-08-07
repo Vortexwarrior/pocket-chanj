@@ -10,6 +10,7 @@
             <div class="field">
                 {{! ---FORM GROUP ADDED }}
                 <div class="form-group">
+                    <h2>Income</h2>
                     <label for="income-source-name" id="formTitle">Income Name:</label>
                     <input class="sourcename-input" type="text" id="income-source-name" name="income-source-name" />
                     <label for="income-source-amount" id="formTitle">Income Amount:</label>
@@ -26,6 +27,7 @@
         <form class="expenses-input">
             {{! ---FORM GROUP ADDED }}
             <div class="form-group">
+                <h2>Expenses</h2>
                 <label for="expense-source-name" id="formTitle">Expense Name:</label>
                 <input class="sourcename-input" type="text" id="expense-source-name" name="expense-source-name" />
                 <label for="expense-source-amount" id="formTitle">Expense Amount:</label>
@@ -82,8 +84,6 @@
 
 </div>
 
-{{> chart }}
+{{> incomeChart budgetreports=budgetreports }}
+
 <script src="../js/userprofile.js"></script>
-
-<div>{{>incomeChart}}</div>
-

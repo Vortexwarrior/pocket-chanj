@@ -1,20 +1,18 @@
-<h3>Income Bar Graph</h3>
-<canvas id="incomeGraph" aria-label="chart" height="50" width="180"></canvas>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        let sources = [];
-        let incomeAmounts = [];
-
-        {{#each budgetreports as |budgetreport|}}
-            sources.push("{{budgetreport.income_name}}");
-            incomeAmounts.push({{budgetreport.income_amount}});
-        {{/each}}
-
-        var incomeGraph = {
-            labels: sources,
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js"></script>
+<canvas id="expenseGraph" aria - label="chart" height="50" width="180"></canvas>
+<div>
+    expense_name = expenseName
+    <script>
+         var chrt = document.getElementById("expenseGraph").getContext("2d");
+        var expenseGraph = new Chart(chrt, {
+            type: 'bar',
+            data: {
+                labels: {{}},
             datasets: [{
-                label: "Income",
-                data: incomeAmounts,
+                label: "Monthly Expenses",
+                data: [500, 1250, 145, 900],
+
                 backgroundColor: [
                     'rgba(255, 26, 104, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -35,24 +33,32 @@
                 ],
                 borderWidth: 1
             }]
-        };
 
+        },
+            options: {
+            responsive: true,
+        },
+    });
+        // Config
         const config = {
             type: 'bar',
-            data: incomeGraph,
+            data: {},
             options: {
                 scales: {
+
                     y: {
                         beginAtZero: true
-                    }
-                },
-                responsive: true
-            }
-        };
+                    },
 
+
+                    responsive: true,
+                }
+            }
+        }
+            ;
         const myChart = new Chart(
-            document.getElementById('incomeGraph'),
+            document.getElementById('expenseGraph'),
             config
         );
-    });
-</script>
+    </script>
+</div>
