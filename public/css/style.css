@@ -43,7 +43,7 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 margin: 10px 0px 10px 0px;
-overflow: scroll;
+
 }
 
 #formTitle {
@@ -138,7 +138,6 @@ color: rgb(92, 67, 6);
   background-color: lightblue;
   width: 50%;
   height: 100%;
-  overflow: auto;
 }
 
 h1 {
