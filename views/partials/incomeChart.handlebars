@@ -1,0 +1,45 @@
+<h3>Income Bar Graph</h3>
+<p>
+    <canvas id="incomeGraph" aria - label="chart" height="50" width="180" incomes="{{stringify incomes}}"></canvas>
+    {{!-- {{#if budgetreports.length}} --}}
+    {{!-- {{#each budgetreports as |budgetreport|}} --}}
+
+    <script>
+        const barCanvas = document.getElementById('incomeGraph');
+        let barData = JSON.parse(barCanvas.getAttribute('incomes'));
+
+        let sources = [];
+        for (let i = 0; i < barData.length; i++) {
+            if (!sources.includes(barData[i].source_name)) {
+                sources.push(barData[i].source_name)
+            }
+        }
+
+        let incomeAmounts = [];
+        for (let i = 0; i < barData.length; i++) {
+            if (!incomeAmounts.includes(barData[i].amount)) {
+                sources.push(barData[i].amount)
+            }
+        }
+
+        const data = {
+            labels: ["Job", "Uber", "eBay"],
+            datasets: [{
+                label: 'Income',
+                data: [6500, 750, 200],
+                backgroundColor: [
+                    "red", "blue", "green", "orange", "purple", "yellow", "black"
+                ],
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {}
+        };
+
+        const myChart = new Chart(barCanvas, config);
+    </script>
+
+</p>
