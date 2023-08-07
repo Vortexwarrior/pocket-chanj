@@ -1,0 +1,64 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js"></script>
+<canvas id="expenseGraph" aria - label="chart" height="50" width="180"></canvas>
+<div>
+    expense_name = expenseName
+    <script>
+         var chrt = document.getElementById("expenseGraph").getContext("2d");
+        var expenseGraph = new Chart(chrt, {
+            type: 'bar',
+            data: {
+                labels: {{}},
+            datasets: [{
+                label: "Monthly Expenses",
+                data: [500, 1250, 145, 900],
+
+                backgroundColor: [
+                    'rgba(255, 26, 104, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(0, 0, 0, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 26, 104, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(0, 0, 0, 1)'
+                ],
+                borderWidth: 1
+            }]
+
+        },
+            options: {
+            responsive: true,
+        },
+    });
+        // Config
+        const config = {
+            type: 'bar',
+            data: {},
+            options: {
+                scales: {
+
+                    y: {
+                        beginAtZero: true
+                    },
+
+
+                    responsive: true,
+                }
+            }
+        }
+            ;
+        const myChart = new Chart(
+            document.getElementById('expenseGraph'),
+            config
+        );
+    </script>
+</div>

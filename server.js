@@ -13,6 +13,8 @@ const routes = require('./controllers');
 //Import sequelize 
 // Looking at activity 23 I see it's connection not connection.js
 const sequelize = require('./config/connection');
+
+const helpers = require('./utils/helpers');
 //import connect-session-sequelize package which is used with express-sessions in order to use a
 //Sequelize Store object that allows us to create a persistent session storage using MySQL or any other supported
 //database backend instead of memory storage by setting it equal to an instance of `SequelizeStore`
@@ -26,7 +28,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 //====================================================================//
 //Set handlebars as the default template engine.
-const hbs = exphbs.create({});
+const hbs = exphbs.create({
+  helpers,
+});
 //===================================================================//
 //Set up sessions
 const sess = {
