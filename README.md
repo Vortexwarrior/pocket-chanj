@@ -40,14 +40,24 @@ As a budget-concious individual, I want to have an easy-to-use budget app that h
 
 ## User Story 
 ```
-
-
+AS A user who is living life on a budget
+I want an app to be able to keep track of my incomes and expenses
 ```
 
 ## Acceptance Criteria : 
 ```
-
-
+WHEN I start the application 
+THEN I am presented with a sign up link & login link 
+WHEN I finish creating an account using the signup link
+THEN I can log in 
+WHEN I log in 
+THEN I am presented with Income and Expense entry boxes
+WHEN I select the sae button 
+THEN the data entered will display on the page 
+WHEN I logout 
+THEN I will not lose any of my information 
+WHEN I log back in 
+THEN I am presented with the previously saved information 
 ```
 
 # Pocket Change App Preview 
@@ -58,8 +68,26 @@ As a budget-concious individual, I want to have an easy-to-use budget app that h
 ![Screen Grab functionality_2](/pocket-chanj/images/chartspage.png) <br>
 
 ## Installation
+Clone this repo to your local machine, then open it in VS Code or any other code editor of your choosing: <br> (***Incase of no Heroku deployent/link***)
+`npm init` <br>
+`npm install mysql 12` <br>
+`npm install sequelize` <br>
+`npm install dotenv` <br>
 
 ## Usage
+Run the follwing command and answer the prompted questions: <br>
+
+`mysql -u root -p` <br>
+
+Enter Passwordword when prompted <br>
+
+`source db/schema.sql` <br> 
+
+`quit` <br>
+
+`npm run seeds` <br>
+
+`npm start` <br>
 
 # License
 **This project is licensed under MIT**
