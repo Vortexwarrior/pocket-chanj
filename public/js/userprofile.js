@@ -12,7 +12,7 @@ function addField(plusElement) {
     // creating the div container.
     let div = document.createElement("div");
 
-    div.setAttribute("class", "form-group");
+    div.setAttribute("class", "response-income");
 
 
     //create the label income name element
@@ -119,7 +119,7 @@ function addFieldE(plusElement) {
     // creating the div container.
     let div2 = document.createElement("div");
 
-    div2.setAttribute("class", "form-group");
+    div2.setAttribute("class", "response-expense");
 
 
 
